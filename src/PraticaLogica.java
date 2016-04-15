@@ -62,5 +62,8 @@ public class PraticaLogica {
 			}
 		}
 	}
+	
+	// Q05.1 - Imprimir todos os elementos de um matriz Anxn
+	//TODO - Aqui vai o seu código
 
 }
