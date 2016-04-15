@@ -65,5 +65,21 @@ public class PraticaLogica {
 	
 	// Q05.1 - Imprimir todos os elementos de um matriz Anxn
 	//TODO - Aqui vai o seu código
+	
+	//Questao 5.5 - imprime todos os elementos exceto a diagonal principal 
+	static void q5(int[][] matriz){
 
+		for(int i=0;i<matriz.length;i++){
+			for(int j=0;j<matriz.length;j++){
+				if(i == j){
+					System.out.printf("\t");
+				}else{
+					System.out.printf("\t%d", matriz[i][j]);
+				}
+			}
+			System.out.println("");
+		}
+	}
+	
+	
 }
