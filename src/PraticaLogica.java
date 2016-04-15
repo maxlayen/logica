@@ -28,8 +28,15 @@ public class PraticaLogica {
 		System.out.println("Média:");
 		// Q04
 		imprimirMedias(nomes, medias);
+		
+		//Q05
+		System.out.printf("Informe o tamanho da matriz: ");
+		int n = s.nextInt();
+		int A[][] = new int[n][n];
+		imprimirmatriz(n,A);
+		System.out.println(" ");
+		diagonalprincipal(n,A);
 	}
-
 	static void q02(String[] vetor, double[][] matriz) {
 
 		System.out.printf("Aluno\tTrabalho1\tTrabalho2\tTrabalho3\n");
@@ -62,29 +69,27 @@ public class PraticaLogica {
 			}
 		}
 	}
-	
-	// Q05.1 - Imprimir todos os elementos de um matriz Anxn
-	// Professor, falta transformar em sub algoritmo
-		//Q05 Parte 1
-	public static void Matriz12(String[] args) {
+	//Q05.1 - Imprimir os elementos de uma matriz Anxn
+	public static void imprimirmatriz(int tamanhodamatriz, int matriz[][]){
 		Scanner s = new Scanner(System.in);
-		int n, i, j;
-		System.out.printf("Informe o tamanho da matriz: ");
-		n = s.nextInt();
-		int A[][] = new int[n][n];
-		for (i = 0; i < A.length; i++) {
-			for (j = 0; j < A.length; j++) {
+		int i, j;
+		for (i = 0; i < matriz.length; i++) {
+			for (j = 0; j < matriz.length; j++) {
 				System.out.printf("Informe o valor da matriz %d %d:", i, j);
-				A[i][j] = s.nextInt();
+				matriz[i][j] = s.nextInt();
 			}
 		}
-		for (i = 0; i < A.length; i++) {
+		for (i = 0; i < matriz.length; i++) {
 			System.out.println(" ");
-			for (j = 0; j < A.length; j++) {
-				System.out.printf("%d \t",A[i][j]);
+			for (j = 0; j < matriz.length; j++) {
+				System.out.printf("%d \t",matriz[i][j]);
 			}
 		}
-		//Q05 Parte 2
+	}
+	//Q05.2 - Imprimir a diagonal principal de uma matriz Anxn
+	public static void diagonalprincipal(int tamanhodamatriz,int A[][]){
+		Scanner s = new Scanner(System.in);
+		int i, j;
 		for (i = 0; i < A.length; i++) {
 			System.out.printf("\n");
 			for (j = 0; j < A.length; j++) {
@@ -96,7 +101,7 @@ public class PraticaLogica {
 			}
 		}
 	}
-	//TODO - Aqui vai o seu código
+
 	
 	//Questao 5.5 - imprime todos os elementos exceto a diagonal principal 
 	static void q5(int[][] matriz){
