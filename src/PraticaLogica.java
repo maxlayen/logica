@@ -36,6 +36,9 @@ public class PraticaLogica {
 		imprimirmatriz(n,A);
 		System.out.println(" ");
 		diagonalprincipal(n,A);
+		//Questão 5.8
+		int[][] matriz = preencherMatriz();
+		imprimirTrianguloSuperiorSecundario(matriz);
 	}
 	static void q02(String[] vetor, double[][] matriz) {
 
@@ -133,3 +136,36 @@ static void diagonalsec(int matriz[][]){
 		}
 	
 }
+
+	//Questão 5.8
+	//Na primeira função pedimos ao usuário para informar o tamanho da matriz, assim a impressão
+	//seria feita independentemente do tamanho da matriz.
+	static int[][] preencherMatriz(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe o tamanho da matriz");
+		int t = scanner.nextInt();
+		int[][] matriz = new int[t][t];
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				System.out.printf("Informe o %d valor da linha na %d coluna: ", i+1, j+1);
+				matriz[i][j] = scanner.nextInt();
+			}
+		}
+		return matriz;
+	}
+	
+	//Impressão do triângulo superior da diagonal secundária.
+	static void imprimirTrianguloSuperiorSecundario(int[][] matriz){
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {				
+			if(i + j <= matriz.length - 2){
+				System.out.printf("%d \t", matriz[i][j]);
+			}else{
+				System.out.printf("\t");
+			}
+			}
+			System.out.println();
+		}
+		
+	}
