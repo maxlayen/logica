@@ -64,6 +64,7 @@ public class PraticaLogica {
 	}
 	
 	// Q05.1 - Imprimir todos os elementos de um matriz Anxn
+	// Professor, falta transformar em sub algoritmo
 		//Q05 Parte 1
 	public static void Matriz12(String[] args) {
 		Scanner s = new Scanner(System.in);
