@@ -112,6 +112,19 @@ public class PraticaLogica {
 			System.out.println("");
 		}
 	}
-	
+//Questao 5.7
+static void diagonalsec(int matriz[][]){
+			for(int i=0;i<3;i++){
+				for(int j=0;j<3;j++){
+					if((i==0 && j==2)||(i==1&&j==1)||(i==2&&j==0)){
+						System.out.print(" \t");
+					}else{
+						System.out.printf("%d\t", matriz[i][j]);
+					}
+
+				}
+				System.out.println("");
+			}
+		}
 	
 }
